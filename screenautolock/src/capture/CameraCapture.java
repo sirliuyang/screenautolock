@@ -4,6 +4,8 @@ import org.opencv.core.Core;
 import org.opencv.core.Mat;
 import org.opencv.highgui.VideoCapture;
 
+import detection.FaceDetection;
+
 
 public class CameraCapture {
 
@@ -21,6 +23,7 @@ public class CameraCapture {
 		}
 		else{
 			capture.retrieve(frame);
+			FaceDetection.detection(frame);
 			capture.release();
 		}
 		
