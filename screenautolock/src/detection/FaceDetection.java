@@ -16,7 +16,7 @@ public class FaceDetection {
 
 		// Create a face detector from the cascade file in the resources
 		// directory.
-		String pic_path = "./pic/80.jpg";
+		String pic_path = "./pic/capture.jpg";
 		String xml_path = "./conf/haarcascade_frontalface_alt.xml";
 
 		CascadeClassifier faceDetector = new CascadeClassifier(xml_path);
@@ -36,7 +36,7 @@ public class FaceDetection {
 					+ rect.width, rect.y + rect.height), new Scalar(0, 255, 0));
 		}
 		// Save the visualized detection.
-		String filename = "./pic/result/result.png";
+		String filename = "./pic/result.jpg";
 		System.out.println(String.format("Writing %s", filename));
 		Highgui.imwrite(filename, image);
 	}
